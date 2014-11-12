@@ -1,0 +1,21 @@
+Itin is a travel itinerary planner
+
+Allows you to:
+Create new itinerary
+Delete itinerary
+
+Create Event
+Edit Event
+Delete Event
+
+Models:
+Itinerary
+Events
+
+
+Workplan
+
+Create Models
+Views
+Routes
+Controller
