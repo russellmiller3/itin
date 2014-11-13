@@ -6,9 +6,13 @@
 <form name="new_itin" action="/itins" method = "post" accept-charset="utf-8">
 	<input type="text" name="itin[title]" placeholder="Trip Name">
 	<label for="itin[start_date]">From</label><br>
-	<input type="date" name="itin[start_date]">
+	<input type="date" name="itin[start_date]"><br>
 	<label for="itin[end_date]">To</label><br>
-	<input type="date" name="itin[end_date]">
+	<input type="date" name="itin[end_date]"><br>
+
+  <label for="itin[notes]">Notes</label><br>
+  <textarea name="itin[notes]">Notes about your trip, Plane reservations, Hotel Name, etc</textarea>
+  <br>
 
 	<input type="submit" value="Save Trip">
 

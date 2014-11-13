@@ -27,7 +27,18 @@ get "/" do
 end
 
 post("/itins") do
+	itin_attrs = params[:itin]
+
+	itin = Itin.new(itin_attrs)
+	itin.save
+
+	if request.xhr?
+		serverResponse = partial :'partials/itin', :locals => {:itin => itin}
+  else
+    redirect "/"
+  end
 end
+
 
 get("/itins/:id") do
 	show_params

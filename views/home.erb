@@ -4,24 +4,22 @@
 
 
 
-<!--
-Add a form that looks up your itinerary
--->
-
-
 <form method = "get" action="/itins/">
 <input type="text" name="itin[title]">
 <button>Look Up Your Itinerary</button>
 </form>
 
-
+<section class = "new_itin">
 <%= partial :'partials/itin_new', :locals => :itin => itin } %>
+</section>
+
+<section class = "itin">
+
+</section>
 
 
 <section class="itinerary hidden">
-<h1><%= itin.title %></h1>
-<h2>Trip Notes</h2>
-<p><%= itin.notes %></p>
+
 <h2>Events</h2>
 <ul class="events">
 	<li>
