@@ -9,13 +9,13 @@ Add a form that looks up your itinerary
 -->
 
 
-<form method = "get" action="/itins/<%=itin.id%>/">
+<form method = "get" action="/itins/">
+<input type="text" name="itin[title]">
 <button>Look Up Your Itinerary</button>
 </form>
 
-<form method = "p" action="/itins/new">
-<button>Create New Itinerary</button>
-</form>
+
+<%= partial :'partials/itin_new', :locals => :itin => itin } %>
 
 
 <section class="itinerary hidden">

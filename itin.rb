@@ -26,9 +26,21 @@ get "/" do
 	erb :'home', :locals => {:itin => itin}
 end
 
+post("/itins") do
+end
+
 get("/itins/:id") do
 	show_params
 	@itin = Itin.get(params[:id])
+end
+
+post("/events") do
+end
+
+puts("/events/:id") do
+end
+
+delete("/events/:id") do
 end
 
 

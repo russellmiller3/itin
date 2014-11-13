@@ -16,6 +16,8 @@ class Itin
 
 property :id, Serial
 property :title, Text
+property :start_date, Date
+property :end_date, Date
 property :notes, Text
 property :created_at, DateTime
 has n, :events
@@ -27,7 +29,7 @@ class Event
 
 	property :id, Serial
 	property :title, Text
-	property :description, Text
+	property :notes, Text
 	property :date, Date
 	property :start_time, Time
 	property :end_time, Time
