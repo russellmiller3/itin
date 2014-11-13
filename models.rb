@@ -18,7 +18,7 @@ property :id, Serial
 property :title, Text
 property :notes, Text
 property :created_at, DateTime
-has n, :event
+has n, :events
 
 end
 
@@ -31,6 +31,7 @@ class Event
 	property :start_date, Date
 	property :end_time, Time
 	property :end_date, Date
+
 	belongs_to :itin
 
 end

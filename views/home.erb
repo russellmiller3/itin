@@ -2,4 +2,39 @@
 
 <p>"Planning a trip?  Use Itin to edit your itinerary with your friends.  Anyone with the itinerary name can edit and save"</p>
 
+<!--
+Add a form that looks up your itinerary
+-->
+
+
+<form method = "get" action="/itins/<%=itin.id%>/">
+<button>Edit Your Itinerary</button>
+</form>
+
+<form method = "get" action="/itins/new">
+<button>New Itinerary</button>
+</form>
+
+
+<section class="itinerary hidden">
+<h1><%= itin.title %></h1>
+<h2>Trip Notes</h2>
+<p><%= itin.notes %></p>
+<h2>Events</h2>
+<ul class="events">
+	<% @events.each do |event| %>
+	<li>
+	<%= partial :'partials/event',:locals => {:event=> event} %>
+	</li>
+	<% end %>
+</ul>
+</section>
+
+
+
+
+
+
+
+
 </div>
