@@ -1,0 +1,19 @@
+<div class="event">
+	<h4><%= event.title %></h4>
+	<p><%= event.description %>
+	</n>
+	On <%= event.date %>
+  </n>
+	From <%= event.start_time %> To <%= event.end_time %>
+	</p>
+
+<form name="delete_event" action="/events/<%= event.id %>" method="post" accept-charset="utf-8" class = "float_right">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete">
+</form>
+
+<form name="edit_event" action="/events/<%= event.id %>" method="post" accept-charset="utf-8" class = "float_right">
+	<input type="hidden" name="_method" value="puts">
+	<input type="submit" value="Edit">
+
+</div>
