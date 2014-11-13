@@ -26,11 +26,11 @@ class Event
 	include DataMapper::Resource
 
 	property :id, Serial
+	property :title, Text
 	property :description, Text
+	property :date, Date
 	property :start_time, Time
-	property :start_date, Date
 	property :end_time, Time
-	property :end_date, Date
 
 	belongs_to :itin
 
