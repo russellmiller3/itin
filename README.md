@@ -1,6 +1,8 @@
 Itin
 
-Itin is a web app for creating shared travel itineraries
+Itin is a web app for creating shared travel itineraries.
+Users can create itineraries and add events.
+
 
 Functional Requirements:
 1. Create new itinerary
@@ -13,10 +15,3 @@ Models:
 Itinerary
 Events
 
-
-Workplan
-
-Create Models
-Views
-Routes
-Controller
