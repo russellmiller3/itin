@@ -1,0 +1,15 @@
+<% if hidden %>
+<form class="hidden" name="new_itin" action="/itins"method = "post" accept-charset="utf-8">
+<button>Create New Trip</button>
+
+<% else %>
+<form name="new_itin" action="/itins" method = "post" accept-charset="utf-8">
+	<input type="text" name="itin[title]" placeholder="Trip Name">
+	<label for="itin[start_date]">From</label><br>
+	<input type="date" name="itin[start_date]">
+	<label for="itin[end_date]">To</label><br>
+	<input type="date" name="itin[end_date]">
+
+	<input type="submit" value="Save Trip">
+
+</form>
