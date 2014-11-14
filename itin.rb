@@ -22,7 +22,7 @@ helpers do
 end
 
 get "/" do
-
+	@events = itin.events if itin
 	erb :'home', :locals => {:itin => itin}
 end
 

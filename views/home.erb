@@ -1,6 +1,6 @@
 <div class="page">
 
-<p>"Planning a trip?  Use Itin to edit your itinerary with your friends.  Anyone with the itinerary name can edit and save"</p>
+<p>Planning a trip?  Use Itin to edit your itinerary with your friends.  Anyone with the itinerary name can edit and save</p>
 
 
 
@@ -10,29 +10,29 @@
 </form>
 
 <section class = "new_itin">
-<%= partial :'partials/itin_new', :locals => :itin => itin } %>
+<%= partial :'partials/itin_new', :locals => {:itin => itin, :hidden => true } %>
 </section>
 
 <section class = "itin">
-
 </section>
 
 
-<section class="itinerary hidden">
-
+<section class="events">
 <h2>Events</h2>
 <ul class="events">
 	<li>
 		<%= partial :'partials/event_new' %>
 	</li>
-
-	<% @events.each do |event| %>
-	<li>
-	<%= partial :'partials/event',:locals => {:event=> event} %>
-	</li>
+	<% if @events %>
+		<% @events.each do |event| %>
+		<li>
+		<%= partial :'partials/event',:locals => {:event=> event} %>
+		</li>
+		<% end %>
 	<% end %>
 </ul>
 </section>
+
 
 
 
