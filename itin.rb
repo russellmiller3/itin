@@ -17,14 +17,24 @@ end
 
 helpers do
 	def itin
-		@itin ||= Itin.last
+		@itin
+		# ||= Itin.last
 	end
 end
+
+
+
 
 get "/" do
 	@events = itin.events if itin
 	erb :'home', :locals => {:itin => itin}
 end
+
+post("/itins/create") do
+	hidden = false
+	redirect "/"
+end
+
 
 post("/itins") do
 	itin_attrs = params[:itin]

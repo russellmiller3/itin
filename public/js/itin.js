@@ -4,6 +4,8 @@ var log = function(message) {
 	console.log('[' + timestamp + ']  ' +  message);
 };
 
+	log("Itin.js Loaded");
+	log("jquery.js Loaded");
 var createItinOnSubmit = function() {
 	$('.page').on('submit', 'form[name="new_itin"]', function(evt) {
 		log("New trip form submitted");
@@ -12,7 +14,7 @@ var createItinOnSubmit = function() {
 
 		var $newItinForm = $(this);
 
-		var actionPath = $newItinForm('action');
+		var actionPath = $newItinForm.attr('action');
 		var newItinFormData = $(this).serialize();
 
 		log("Sending POST request to " + actionPath);
@@ -31,4 +33,4 @@ $(document).ready(function() {
 createItinOnSubmit();
 
 
-}
+});
