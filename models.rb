@@ -4,14 +4,14 @@ if ENV['RACK_ENV'] != "production"
 	require 'dotenv'
 	Dotenv.load('.env')
 	DataMapper::Logger.new(STDOUT, :debug)
-	DataMapper.setup(:default, "sqlite:itin.db")
+	DataMapper.setup(:default, "sqlite:itinerary.db")
 end
 
 if ENV['RACK_ENV'] == "production"
 	DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
 
-class Itin
+class Itinerary
 	include DataMapper::Resource
 
 property :id, Serial
@@ -20,7 +20,7 @@ property :start_date, Date
 property :end_date, Date
 property :notes, Text
 property :created_at, DateTime
-has n, :events
+has n, :events, { :child_key => [:itinerary_id]}
 
 end
 
@@ -34,7 +34,7 @@ class Event
 	property :start_time, Time
 	property :end_time, Time
 
-	belongs_to :itin
+	belongs_to :itinerary
 
 end
 

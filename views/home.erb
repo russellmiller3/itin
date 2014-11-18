@@ -1,36 +1,43 @@
 <div class="page">
-<h1>Itin</h1>
-<h2>Planning a trip?  Use Itin to edit your itinerary with your friends.  Anyone with the itinerary name can edit and save</h2>
+<h1>itinerary</h1>
+<h2>Planning a trip?  <br> Use Trip Planner to edit your trip plan with your friends. <br> Anyone with the Trip Name can edit and save</h2>
 
 
-
-<form method = "get" action="/itins/">
-<input type="text" name="itin[title]">
-<button>Look Up Your Itinerary</button>
+<form method = "get" action="/itineraries/" class="float_right">
+<input type="text" name="itinerary[title]">
+<button>Look Up Your Travel Plan</button>
 </form>
 
-<section class = "new_itin">
-<%= partial :'partials/itin_new', :locals => {:itin => itin} %>
+<section class = "new_itinerary">
+<%= partial :'partials/itinerary_new' %>
 </section>
 
-<section class = "itin">
+<section class = "itinerary">
+
 </section>
 
 
 <section class="events">
 <h2>Events</h2>
-<ul class="events">
-	<li>
-		<%= partial :'partials/event_new' %>
-	</li>
-	<% if @events %>
-		<% @events.each do |event| %>
-		<li>
-		<%= partial :'partials/event',:locals => {:event=> event} %>
-		</li>
+
+<ul class="no_bullets no_padding">
+	<% if events %>
+		<% events.each do |event| %>
+			<li>
+
+				<%= partial :'partials/event_edit', :locals => { :event => event } %>
+				<%= partial :'partials/event', :locals => { :event => event } %>
+			</li>
+
 		<% end %>
 	<% end %>
+	<li class="new event">
+	<%= partial :'partials/event_new' %>
+	</li>
 </ul>
+
+
+
 </section>
 
 

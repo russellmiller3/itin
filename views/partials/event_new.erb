@@ -1,7 +1,16 @@
-<form name="new_event" action="/events" method="post" accept-charset="utf-8">
-<label for="event[title]">Event</label><br>
-<input type="text" name="event[title]">
+<script type = "text/javascript" src="/js/jquery.timepicker.js"></script>
 
+<form name="new_event" action="/events" method="post" accept-charset="utf-8">
+
+<label for="event[title]">Event Name</label><br>
+<input type="text" name="event[title]"><br><br>
+<p><i>On</i>
+<label for="event[date]">Date </label><br>
+	<input type="text" class="datepicker" name="event[date]"><br>
+<i>From</i>
+<input type="text" class="timepicker" name="event[start_time]"><br>
+<i>To</i>
+<input type="text" class="timepicker" name="event[end_time]"><br>
 <label for="event[notes]">Notes (optional)</label><br>
 <textarea  name="event[notes]"></textarea>
 <br>

@@ -1,0 +1,22 @@
+
+<form name="edit_itinerary" action="/itineraries/<%= itinerary.id %>" method="post" accept-charset="utf-8" class = "float_right">
+
+<input type="hidden" name="_method" value="put">
+
+<input type="text" name="itinerary[title]" value="<%= itinerary.title %>">
+
+<input type="text" name="itinerary[start_date]" value="<%= itinerary.start_date %>">
+
+<input type="text" name="itinerary[end_date]" value="<%= itinerary.end_date %>">
+
+
+<input type="text" name="itinerary[notes]" value="<%= itinerary.notes %>">
+<input type="submit" value="Edit">
+
+</form>
+
+<br><br>
+<form name="delete_itinerary" action="/itinerarys/<%= itinerary.id %>" method="post" accept-charset="utf-8" class = "float_right">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete" style="background-color:#c00;color:#fff;">
+</form>

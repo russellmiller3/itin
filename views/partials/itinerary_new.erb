@@ -1,0 +1,21 @@
+<br><br>
+<h2>Create a New Trip</h2>
+<form name="new_itinerary" action="/itineraries" method = "post" accept-charset="utf-8">
+
+	<label for="itinerary[title]">Trip Name</label><br>
+	<input type="text" name="itinerary[title]" placeholder="Napa"><br><br>
+	<label for="itinerary[start_date]">From: </label><br>
+	<input type="text" class="datepicker" name="itinerary[start_date]"><br>
+	<label for="itinerary[end_date]">To:</label><br>
+	<input type="text" class="datepicker" name="itinerary[end_date]"><br><br>
+  <label for="itinerary[notes]">Notes</label><br>
+  <textarea name="itinerary[notes]" rows="8" cols="50" placeholder="Notes about your trip, Plane reservations, Hotel Name, etc"></textarea>
+  <br>
+
+	<input type="submit" value="Save Trip">
+</form>
+
+
+
+
+

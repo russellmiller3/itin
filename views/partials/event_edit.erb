@@ -1,0 +1,23 @@
+
+<form name="edit_event" action="/events/<%= event.id %>" method="post" accept-charset="utf-8" class = "float_right">
+
+<input type="hidden" name="_method" value="put">
+
+<input type="text" name="event[title]" value="<%= event.title %>">
+
+<input type="text" name="event[date]" value="<%= event.date %>">
+
+<input type="text" name="event[start_time]" value="<%= event.start_time %>">
+<input type="text" name="event[end_time]" value="<%= event.end_time %>">
+
+
+<input type="text" name="event[notes]" value="<%= event.notes %>">
+<input type="submit" value="Edit">
+
+</form>
+
+<br><br>
+<form name="delete_event" action="/events/<%= event.id %>" method="post" accept-charset="utf-8" class = "float_right">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete">
+</form>
